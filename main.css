@@ -87,6 +87,11 @@
   margin: 3em auto;
 }
 
+@media (max-width: 375px) {
+  .container {
+    margin: 7px 7px;
+  }
+}
 .top-nav {
   display: flex;
   flex-direction: row;
@@ -107,7 +112,7 @@
   flex-direction: row;
   align-items: flex-end;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   min-width: 25%;
   gap: 5px;
 }
@@ -182,6 +187,12 @@ input[type="range"]::-moz-range-thumb {
   word-break: break-all;
 }
 
+@media (max-width: 375px) {
+  .output {
+    margin: 7px 7px;
+  }
+}
+
 .previous-operand {
   color: rgb(197, 195, 195);
 }
@@ -190,6 +201,12 @@ input[type="range"]::-moz-range-thumb {
   color: var(--primary-text);
   font-weight: 900;
   font-size: 46px;
+}
+
+@media (max-width: 375px) {
+  .current-operand {
+    font-size: 34px;
+  }
 }
 
 /* KEYPAD SECTION */
@@ -206,6 +223,13 @@ input[type="range"]::-moz-range-thumb {
   gap: 0.75em;
 }
 
+@media (max-width: 375px) {
+  .keypad {
+    margin: 7px 7px;
+    gap: 9px 7px;
+  }
+}
+
 .btn {
   font-size: 32px;
   font-weight: bold;
@@ -215,6 +239,12 @@ input[type="range"]::-moz-range-thumb {
   border-style: none;
   box-shadow: 0px 3px 1px 2px var(--btn-shadow);
   cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .btn {
+    font-size: 24px;
+  }
 }
 
 .blue-btn {
@@ -231,12 +261,6 @@ input[type="range"]::-moz-range-thumb {
 
 .span-two {
   grid-column: span 2;
-}
-
-@media (max-width: 575px) {
-  html {
-    margin: 1em 1em;
-  }
 }
 
 /* ### THEME TWO ### */
