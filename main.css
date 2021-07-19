@@ -246,6 +246,7 @@ input[type="range"]::-moz-range-thumb {
     margin: 7px 7px;
     gap: 9px 7px;
     padding: 5px 5px;
+    padding-bottom: 7px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 75px);
     max-width: 100vw;
