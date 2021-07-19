@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+/* RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+/* ### VARIABLES ### */
+
+/* Theme One vars */
+.theme-1 {
+  /* text clrs */
+  --primary-text: white;
+  --secondary-text: hsl(221, 14%, 31%);
+  --accent-text: white;
+  /* bg clrs */
+  --main-bg: hsl(222, 26%, 31%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  /* btn clrs */
+  --btn-bg: hsl(30, 25%, 89%);
+  --btn-shadow: hsl(28, 16%, 65%);
+
+  --sec-btn-bg: hsl(225, 21%, 49%);
+  --sec-btn-shadow: hsl(224, 28%, 35%);
+  --accent-btn-bg: hsl(6, 63%, 50%);
+  --accent-btn-shadow: hsl(6, 70%, 34%);
+}
+
+/* Theme Two vars */
+.theme-2 {
+  /*  text clrs */
+  --primary-text: hsl(60, 10%, 19%);
+  --secondary-text: hsl(60, 10%, 19%);
+  --accent-text: white;
+  /* bg clrs */
+  --main-bg: hsl(0, 0%, 90%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  /* btn clrs */
+  --btn-bg: hsl(45, 7%, 89%);
+  --btn-shadow: hsl(35, 11%, 61%);
+
+  --sec-btn-bg: hsl(185, 42%, 37%);
+  --sec-btn-shadow: hsl(185, 58%, 25%);
+  --accent-btn-bg: hsl(25, 98%, 40%);
+  --accent-btn-shadow: hsl(25, 99%, 27%);
+}
+
+/* Theme Three vars */
+.theme-3 {
+  /*  text clrs */
+  --primary-text: hsl(52, 100%, 62%);
+  --secondary-text: hsl(52, 100%, 62%);
+  --accent-text: white;
+  /* bg clrs */
+  --main-bg: hsl(268, 75%, 9%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  /* btn clrs */
+  --btn-bg: hsl(281, 89%, 26%);
+  --btn-shadow: hsl(285, 91%, 52%);
+
+  --sec-btn-bg: hsl(268, 47%, 21%);
+  --sec-btn-shadow: hsl(290, 70%, 36%);
+  --accent-btn-bg: hsl(176, 76%, 42%);
+  --accent-btn-shadow: hsl(177, 92%, 70%);
+}
+
+/* ### GENERAL ### */
+#body {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--main-bg);
+}
+
+.container {
+  max-width: 700px;
+  height: 100vh;
+  margin: 3em auto;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* TOP SECTION */
+.brand {
+  font-weight: 900;
+  color: var(--primary-text);
+  font-size: 36px;
+}
+
+/* 3-state THEME TOGGLE BTN */
+#selector-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-size: 12px;
+  min-width: 25%;
+  gap: 5px;
+}
+.selector {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.num-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 12px;
+  color: var(--primary-text);
+}
+.switch-cont {
+  max-width: 50px;
+  background-color: var(--keypad-bg);
+  border-radius: 0.89rem;
+
+  display: flex;
+  justify-content: flex-start;
+}
+.switch {
+  width: 100%;
+  background-color: var(--accent-btn-bg);
+  border-radius: 50%;
+  cursor: grab;
+  padding: 0.2rem 0.3em;
+}
+.switch:active {
+  cursor: grabbing;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--accent-btn-bg);
+  border-radius: 50%;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--accent-btn-bg);
+  border-radius: 50%;
+}
+
+/* OUTPUT SECTION (SCREEN) */
+
+.output {
+  background-color: var(--screen-bg);
+  width: 100%;
+  min-height: 120px;
+  max-height: auto;
+  margin-top: 0.5em;
+  padding: 0.5em 0.75em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: rgb(197, 195, 195);
+}
+
+.current-operand {
+  color: var(--primary-text);
+  font-weight: 900;
+  font-size: 46px;
+}
+
+/* KEYPAD SECTION */
+.keypad {
+  background-color: var(--keypad-bg);
+  width: 100%;
+  height: auto;
+  margin: 0.5em 0;
+  padding: 1em 1em;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 75px);
+  gap: 0.75em;
+}
+
+.btn {
+  font-size: 32px;
+  font-weight: bold;
+  background-color: var(--btn-bg);
+  color: var(--secondary-text);
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: 0px 3px 1px 2px var(--btn-shadow);
+  cursor: pointer;
+}
+
+.blue-btn {
+  background-color: var(--sec-btn-bg);
+  color: var(--accent-text);
+  box-shadow: 0px 3px 1px 2px var(--sec-btn-shadow);
+}
+
+.red-btn {
+  background-color: var(--accent-btn-bg);
+  color: var(--accent-text);
+  box-shadow: 0px 3px 1px 2px var(--accent-btn-shadow);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+@media (max-width: 575px) {
+  html {
+    margin: 1em 1em;
+  }
+}
+
+/* ### THEME TWO ### */
+
+/* attribution style by FrontEnd Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--primary-text);
+}
